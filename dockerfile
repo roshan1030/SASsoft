@@ -3,6 +3,8 @@ FROM node:14
 WORKDIR /app
 
 COPY package*.json ./
-RUN nom install
+RUN npm install
+
+COPY . .
 
 CMD ["node", "main.js"]
